@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { BASE_URL } from '../api';  // 👈 यह import करें
 
 function ItemForm({ fetchItems, editItem, setEditItem }) {
   const [name, setName] = useState('');
@@ -19,18 +20,16 @@ function ItemForm({ fetchItems, editItem, setEditItem }) {
     const itemData = { name, description, price };
 
     if (editItem) {
-      // Update Item
-      await axios.put(`http://localhost:8000/api/items/${editItem.id}/`, itemData);
+      await axios.put(`${BASE_URL}/items/${editItem.id}/`, itemData);
       setEditItem(null);
     } else {
-      // Add Item
-      await axios.post('http://localhost:8000/api/items/', itemData);
+      await axios.post(`${BASE_URL}/items/`, itemData);
     }
 
     setName('');
     setDescription('');
     setPrice('');
-    fetchItems();  // Refresh List
+    fetchItems();
   };
 
   return (
