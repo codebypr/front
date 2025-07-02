@@ -34,7 +34,7 @@ function ItemForm({ fetchItems, editItem, setEditItem }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>{editItem ? "Edit Item" : "Add New Item"}</h2>
+      <h2 className='bg-amber-600'>{editItem ? "Edit Item" : "Add New Item"}</h2>
       <input
         type="text"
         placeholder="नाम"
