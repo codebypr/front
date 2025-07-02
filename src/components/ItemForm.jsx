@@ -55,6 +55,7 @@ function ItemForm({ fetchItems, editItem, setEditItem }) {
         required
       /><br />
       <button type="submit">{editItem ? "Update" : "Add"}</button>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eum. Velit amet quasi voluptate temporibus ipsa commodi sint voluptatem, libero magnam, corrupti expedita cupiditate voluptatum hic repellat odit consectetur nesciunt.</p>
     </form>
   );
 }
