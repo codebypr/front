@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { BASE_URL } from '../api';  // 👈 यह import करें
+import { BASE_URL } from '../api';  // यह import करें
 
 function ItemForm({ fetchItems, editItem, setEditItem }) {
   const [name, setName] = useState('');
@@ -34,7 +34,7 @@ function ItemForm({ fetchItems, editItem, setEditItem }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2 className='bg-amber-600'>{editItem ? "Edit Item" : "Add New Item"}</h2>
+      <h2 className='bg-blue-500'>{editItem ? "Edit Item" : "Add New Item"}</h2>
       <input
         type="text"
         placeholder="नाम"
